@@ -1,4 +1,2 @@
-# Project-A-Star
-Personal Project A*
- 
+# Project-Stark-AI 
 #Full-Stack-LLM
