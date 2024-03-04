@@ -1,10 +1,14 @@
 import React from "react";
 import LeftSection from "./LeftSection";
-import RightSection from "./RightSection";
+import {RightSection} from "./RightSection";
+
 
 export const Home = () => {
-    <div>
-        <LeftSection />
-        <RightSection/>
-    </div>
+    return (
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', backgroundColor: '#070F2B', height: '100vh' }}>
+                <LeftSection />
+                <RightSection />
+
+        </div>
+    );
 }

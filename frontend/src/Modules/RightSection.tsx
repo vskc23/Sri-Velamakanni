@@ -1,14 +1,13 @@
-import React from 'react';
+import  React  from "react";
+import logo from '../logi1.svg';
 
-const RightSection: React.FC = () => {
-  return (
-    <div className="rightPane">
-      {/* Infinite scrolling content goes here */}
-      <div className="section">Section 1</div>
-      <div className="section">Section 2</div>
-      {/* More sections can be added dynamically */}
-    </div>
-  );
+export const RightSection = () => {
+    return (
+        <div style={{  backgroundColor: '#0F172ABF', color:'white'}}>
+            <header >
+        <img src={logo}  alt="logo" />
+        <h1>Stark AI</h1>
+      </header>
+        </div>
+    );
 }
-
-export default RightSection;
