@@ -88,23 +88,63 @@ export const sections: {
     title: "Projects",
     content: [
       {
-        startDate: "2023-01",
-        endDate: "2023-04",
-        title: "Pennsylvania State University",
+        startDate: "2024-01",
+        endDate: "2024-04",
+        title: "Skyward Analytics",
 
-        description: "As a Teaching Assistant for CMPSC 461 (Programming Language Concepts), my responsibilities include, but are not limited to conducting office hours and helping students with their doubts, designing and grading assignments mini projects, and proctoring exams.",
+        description: "Predicted flight delays using advanced machine learning techniques (Logistic Regression, Random Forest, SVM, XGBoost) with up to 83.09% accuracy. Integrated bird strike data for enhanced predictions, conducted detailed EDA, and implemented ensemble techniques to address class imbalance and refine feature selection.",
         skills: ["Python", "Scheme", "Functional Programming"],
-        location: "State College, SC",
+
         imageUrl: `${process.env.PUBLIC_URL}/icons/download.jpg`,
         // isProject: true,
       },
       {
-        startDate: "2016-06",
-        endDate: "2020-04",
-        title: "GITAM (Deemed to be University)",
-        description: "As a Software Engineer (Analyst), I played a pivotal role in enhancing system efficiency and data accessibility. I led the redesign of scheduling services, employing cron jobs to generate critical reports stored in region-specific S3 buckets with access constraints. By implementing Hazelcast, I significantly optimized data caching, elevating application performance. My Agile leadership was evident in sprint activities, ensuring a high Say/Do ratio, while my efforts in documentation and onboarding yielded a 10% increase in developer productivity. Collaborating on user-centric designs, I contributed to a remarkable 95% user satisfaction rating through feedback surveys.",
+        startDate: "2023-09",
+        endDate: "2023-12",
+        title: "Mitigating Plagiarism and Data Leakage in AI Models",
+        description: "Developed methods to reduce plagiarism and PII leakage in fine-tuned GPT-2 models, achieving up to 50% reduction in idea plagiarism and over 90% reduction in PII leakage. Implemented pipelines to filter out PII and conducted extensive experiments to validate effectiveness",
         skills: ["Hazelcast", "Liquibase", "Agile Methodologies", "REST APIs"],
-        location: "Hyderabad, IN",
+ 
+        imageUrl: `${process.env.PUBLIC_URL}/icons/download.jpg`,
+        // isProject: true,
+      },
+      {
+        startDate: "2023-09",
+        endDate: "2023-12",
+        title: "User Manual Summarization using Text Generation Techniques",
+        description: "Developed a high-accuracy news classification model using BiLSTMs, CNNs, and XLNet, achieving up to 84% F1 score. Addressed class imbalance with advanced techniques, conducted in-depth EDA, and evaluated model performance using various metrics to ensure robustness.",
+        skills: ["Hazelcast", "Liquibase", "Agile Methodologies", "REST APIs"],
+ 
+        imageUrl: `${process.env.PUBLIC_URL}/icons/download.jpg`,
+        // isProject: true,
+      },
+      {
+        startDate: "2023-01",
+        endDate: "2023-04",
+        title: "Comparative Study of Static and Dynamic Code Analysis Tools",
+        description: "Conducted a comparative analysis of static and dynamic code analysis tools, improving vulnerability detection and software security by up to 50%. Identified and analyzed critical security vulnerabilities, demonstrating trade-offs between detection accuracy and performance overhead.",
+        skills: ["Hazelcast", "Liquibase", "Agile Methodologies", "REST APIs"],
+   
+        imageUrl: `${process.env.PUBLIC_URL}/icons/download.jpg`,
+        // isProject: true,
+      },
+      {
+        startDate: "2023-09",
+        endDate: "2023-12",
+        title: "Systolic Arrays for Neural Network Acceleration",
+        description: "Analyzed ResNet-18 and GoogLeNet architectures, optimizing systolic array configurations to reduce computation cycles by up to 50%. Demonstrated the best balance of performance and resource utilization with a 32x32 array size, and enhanced MobileNet architecture through extensive simulations.",
+        skills: ["Hazelcast", "Liquibase", "Agile Methodologies", "REST APIs"],
+  
+        imageUrl: `${process.env.PUBLIC_URL}/icons/download.jpg`,
+        // isProject: true,
+      },
+      {
+        startDate: "2024-01",
+        endDate: "2024-04",
+        title: "Enhancing Accessibility for Color Vision Deficiency",
+        description: "Developed a CNN-based system to enhance accessibility for individuals with CVD, improving image classification accuracy by up to 38.13%. Trained models using CIFAR-100 dataset and demonstrated real-time applications with GAN-like models for dynamic color correction, enhancing visual accessibility.",
+        skills: ["Hazelcast", "Liquibase", "Agile Methodologies", "REST APIs"],
+  
         imageUrl: `${process.env.PUBLIC_URL}/icons/download.jpg`,
         // isProject: true,
       },
@@ -114,12 +154,13 @@ export const sections: {
   {
     id: "achievements",
     title: "Achievements",
-    content: [
-      "Won first place in a coding competition",
-      "Published a research paper on machine learning",
-      "Received the Employee of the Year award",
-      "Completed a marathon",
-      "Developed a successful open-source project"
+    "content": [
+      "Conducted tech workshops for 1,200 students in Hyderabad via DBS Bank's Campus Connect.",
+      "Organized team-bonding sessions as part of DBS's engagement squad.",
+      "Led sustainable initiatives, managing plantations at DBS and the University.",
+      "Represented school and university in Table Tennis tournaments.",
+      "Won Super Rookie award for two consecutive quarters and multiple spot awards at DBS.",
+      "Ranked in the top 10 percentile among 1,500 students, earning an undergraduate scholarship."
     ],
     isAchievement: true,
   },
