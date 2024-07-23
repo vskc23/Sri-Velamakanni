@@ -1,17 +1,12 @@
 {
   "files": {
-    "main.css": "/Sri-Velamakanni/static/css/main.427275ce.chunk.css",
-    "main.js": "/Sri-Velamakanni/static/js/main.0440269a.chunk.js",
-    "main.js.map": "/Sri-Velamakanni/static/js/main.0440269a.chunk.js.map",
-    "runtime~main.js": "/Sri-Velamakanni/static/js/runtime~main.47981434.js",
-    "runtime~main.js.map": "/Sri-Velamakanni/static/js/runtime~main.47981434.js.map",
-    "static/js/2.41d31066.chunk.js": "/Sri-Velamakanni/static/js/2.41d31066.chunk.js",
-    "static/js/2.41d31066.chunk.js.map": "/Sri-Velamakanni/static/js/2.41d31066.chunk.js.map",
-    "static/js/3.d6a3adab.chunk.js": "/Sri-Velamakanni/static/js/3.d6a3adab.chunk.js",
-    "static/js/3.d6a3adab.chunk.js.map": "/Sri-Velamakanni/static/js/3.d6a3adab.chunk.js.map",
+    "main.css": "/Sri-Velamakanni/static/css/main.c94195ef.chunk.css",
+    "main.js": "/Sri-Velamakanni/static/js/main.cd418aba.chunk.js",
+    "runtime~main.js": "/Sri-Velamakanni/static/js/runtime~main.dad43d4e.js",
+    "static/js/2.d2bd31dd.chunk.js": "/Sri-Velamakanni/static/js/2.d2bd31dd.chunk.js",
+    "static/js/3.e4d7eff1.chunk.js": "/Sri-Velamakanni/static/js/3.e4d7eff1.chunk.js",
     "index.html": "/Sri-Velamakanni/index.html",
-    "precache-manifest.182e65ee1097c582f440bd4b2e574e43.js": "/Sri-Velamakanni/precache-manifest.182e65ee1097c582f440bd4b2e574e43.js",
-    "service-worker.js": "/Sri-Velamakanni/service-worker.js",
-    "static/css/main.427275ce.chunk.css.map": "/Sri-Velamakanni/static/css/main.427275ce.chunk.css.map"
+    "precache-manifest.24e7a51f9d2c462b7ffd4228f8027454.js": "/Sri-Velamakanni/precache-manifest.24e7a51f9d2c462b7ffd4228f8027454.js",
+    "service-worker.js": "/Sri-Velamakanni/service-worker.js"
   }
 }
