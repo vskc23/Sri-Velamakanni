@@ -11,6 +11,8 @@ export interface CustomCardProps {
   isProject?: boolean;
   isAchievement?: boolean;
   content?: string[]; 
+  gpa?: string;
+  isAcademics?: boolean;
 }
 
 export interface AchievementCardProps {

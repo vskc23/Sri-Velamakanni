@@ -1,6 +1,7 @@
 import React from "react";
 import LeftSection from "./LeftSection";
 import RightSection from "./RightSection";
+import ResponsiveAlert from './Notification';
 
 export const Home = () => {
   const handleNavigation = (sectionId: any) => {
@@ -9,6 +10,9 @@ export const Home = () => {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+
+
   return (
     <div
       style={{
@@ -17,7 +21,9 @@ export const Home = () => {
         backgroundColor: "#424242",
         height: "100vh",
       }}
+      
     >
+       <ResponsiveAlert />
       <LeftSection handleNavigation={handleNavigation} />
       <RightSection handleNavigation={handleNavigation} />
     </div>

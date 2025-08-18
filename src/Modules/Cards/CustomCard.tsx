@@ -78,6 +78,13 @@ export const CustomCard = (props: CustomCardProps) => {
           >
             {props.location}
           </Typography>
+          <Typography
+            variant="body2"
+            color="common.white"
+            sx={{ textAlign: "right" }}
+          >
+            {props.isAcademics? `GPA: ${props.gpa}`: ""}
+          </Typography>
         </Box>
       </Box>
       <CardContent>

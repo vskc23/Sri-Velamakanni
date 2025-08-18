@@ -15,11 +15,9 @@ import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 import CodeIcon from "@mui/icons-material/Code";
 import EmailIcon from "@mui/icons-material/Email";
-import {
-  linkedInProfileLink,
-  githubProfileLink,
-  gmailEmailLink,
-} from "../constants/envData";
+import ContactPage from "@mui/icons-material/ContactPage";
+import Tooltip from '@mui/material/Tooltip';
+
 
 const LeftSection = ({
   handleNavigation,
@@ -27,9 +25,6 @@ const LeftSection = ({
   handleNavigation: (sectionId: string) => void;
 }) => {
 
-  console.log("githubProfileLink", githubProfileLink);
-  console.log("email", gmailEmailLink);
-  console.log("linkedin", linkedInProfileLink);
 
   return (
     <div
@@ -105,31 +100,47 @@ const LeftSection = ({
       </List>
 
       <div style={{ marginTop: "1rem" }}>
-        <IconButton
-          component="a"
-          href={linkedInProfileLink}
-          target="_blank"
-          style={{ color: "white" }}
-        >
-          <LinkedInIcon />
-        </IconButton>
-
-        <IconButton
-          component="a"
-          href={githubProfileLink}
-          target="_blank"
-          style={{ color: "white" }}
-        >
-          
-          <GitHubIcon />
-        </IconButton>
-        <IconButton
-          href={`mailto:${gmailEmailLink}`}
-          target="_blank"
-          style={{ color: "white" }}
-        >
-          <EmailIcon />
-        </IconButton>
+        <Tooltip title="LinkedIn">
+          <IconButton
+            component="a"
+            href={"https://www.linkedin.com/in/v-sri-krishna"}
+            target="_blank"
+            style={{ color: "white" }}
+          >
+            <LinkedInIcon />
+          </IconButton>
+        </Tooltip>
+      
+        <Tooltip title="GitHub">
+          <IconButton
+            component="a"
+            href={"https://github.com/vskc23"}
+            target="_blank"
+            style={{ color: "white" }}
+          >
+            <GitHubIcon />
+          </IconButton>
+        </Tooltip>
+      
+        <Tooltip title="Email">
+          <IconButton
+            href={`mailto:${"kckrishna234@gmail.com"}`}
+            target="_blank"
+            style={{ color: "white" }}
+          >
+            <EmailIcon />
+          </IconButton>
+        </Tooltip>
+      
+        <Tooltip title="Download Resume">
+          <IconButton
+            href={"https://drive.google.com/file/d/1J9viP8ih4A1SGG3XbaO6kzBBN4czW4aQ/view?usp=FILE_ID"}
+            target="_blank"
+            style={{ color: "white" }}
+          >
+            <ContactPage />
+          </IconButton>
+        </Tooltip>
       </div>
     </div>
   );
