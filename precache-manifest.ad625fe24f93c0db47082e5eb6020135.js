@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "83e2d6715b48f56f35463415fc912bf5",
+    "revision": "db677ff9f166adfa8b0a3249b0a20baa",
     "url": "/Sri-Velamakanni/index.html"
   },
   {
-    "revision": "f623ad7bb2e0c568dbb1",
-    "url": "/Sri-Velamakanni/static/css/main.1e1152ce.chunk.css"
+    "revision": "01757d5d44b5c1ec64b8",
+    "url": "/Sri-Velamakanni/static/css/main.32f65a8b.chunk.css"
   },
   {
     "revision": "7129acce9c76cf84863c",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Sri-Velamakanni/static/js/3.221534a8.chunk.js"
   },
   {
-    "revision": "f623ad7bb2e0c568dbb1",
+    "revision": "01757d5d44b5c1ec64b8",
     "url": "/Sri-Velamakanni/static/js/main.4f4849cb.chunk.js"
   },
   {
