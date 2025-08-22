@@ -7,22 +7,19 @@ import {
   Card,
   CardContent,
   Avatar,
-  useTheme,
-  useMediaQuery,
   Fade,
 } from '@mui/material';
 import {
   EmojiEvents as TrophyIcon,
   Group as GroupIcon,
   Nature as EcoIcon,
-  Sports as SportsIcon,
+  SportsBaseball as SportsIcon,
   Star as StarIcon,
   School as SchoolIcon,
 } from '@mui/icons-material';
 import { sections } from '../constants/sectionData';
 
 const AchievementsSection = () => {
-  const theme = useTheme();
   
   const achievementsData = sections.find(section => section.id === 'achievements');
 
@@ -352,4 +349,4 @@ const AchievementsSection = () => {
   );
 };
 
-export default AchievementsSection;
+export default React.memo(AchievementsSection);

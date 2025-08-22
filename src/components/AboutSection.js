@@ -248,7 +248,7 @@ const AboutSection = () => {
                 fontSize: '1.1rem',
               }}
             >
-              I'm actively seeking full-time Software Engineering opportunities starting December 2024.
+              I'm currently working as a Software Engineer at Walmart Global Tech as of August 2025.
               Let's build something amazing together!
             </Typography>
             <Box

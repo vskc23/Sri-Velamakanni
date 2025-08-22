@@ -8,15 +8,13 @@ import {
   CardContent,
   Avatar,
   Chip,
-  useTheme,
-  useMediaQuery,
   Fade,
 } from '@mui/material';
 import { School as SchoolIcon, Grade as GradeIcon } from '@mui/icons-material';
 import { sections } from '../constants/sectionData';
+import InstitutionIcon from './InstitutionIcon';
 
 const AcademicsSection = () => {
-  const theme = useTheme();
   
   const academicsData = sections.find(section => section.id === 'academics');
 
@@ -120,19 +118,14 @@ const AcademicsSection = () => {
                   <CardContent sx={{ p: 5, position: 'relative', zIndex: 1 }}>
                     {/* Header with Institution Logo */}
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, mb: 4 }}>
-                      <Avatar
-                        src={education.imageUrl}
+                      <InstitutionIcon
+                        imageUrl={education.imageUrl}
+                        websiteUrl={education.websiteUrl}
+                        title={education.title}
+                        size={80}
+                        borderColor="rgba(100, 255, 218, 0.3)"
                         className="institution-logo"
-                        sx={{
-                          width: 80,
-                          height: 80,
-                          border: '3px solid rgba(100, 255, 218, 0.3)',
-                          transition: 'all 0.3s ease',
-                          boxShadow: '0 8px 25px rgba(100, 255, 218, 0.2)',
-                        }}
-                      >
-                        <SchoolIcon sx={{ fontSize: '2rem' }} />
-                      </Avatar>
+                      />
                       <Box sx={{ flex: 1 }}>
                         <Typography
                           variant="h4"
@@ -170,6 +163,10 @@ const AcademicsSection = () => {
                               backgroundColor: 'rgba(100, 255, 218, 0.05)',
                               border: '1px solid rgba(100, 255, 218, 0.1)',
                               textAlign: 'center',
+                              height: '140px',
+                              display: 'flex',
+                              flexDirection: 'column',
+                              justifyContent: 'center',
                             }}
                           >
                             <GradeIcon
@@ -208,6 +205,10 @@ const AcademicsSection = () => {
                               backgroundColor: 'rgba(255, 107, 107, 0.05)',
                               border: '1px solid rgba(255, 107, 107, 0.1)',
                               textAlign: 'center',
+                              height: '140px',
+                              display: 'flex',
+                              flexDirection: 'column',
+                              justifyContent: 'center',
                             }}
                           >
                             <SchoolIcon
@@ -284,26 +285,6 @@ const AcademicsSection = () => {
                       </Box>
                     </Box>
 
-                    {/* Academic Achievement Badge */}
-                    {index === 0 && (
-                      <Box
-                        sx={{
-                          position: 'absolute',
-                          top: 20,
-                          right: 20,
-                          background: 'linear-gradient(45deg, #64ffda 30%, #4ade80 90%)',
-                          color: 'background.default',
-                          px: 2,
-                          py: 1,
-                          borderRadius: 2,
-                          fontSize: '0.8rem',
-                          fontWeight: 600,
-                          boxShadow: '0 4px 15px rgba(100, 255, 218, 0.3)',
-                        }}
-                      >
-                        Current
-                      </Box>
-                    )}
                   </CardContent>
                 </Card>
               </Fade>
@@ -311,96 +292,9 @@ const AcademicsSection = () => {
           ))}
         </Grid>
 
-        {/* Academic Highlights */}
-        <Fade in={true} timeout={2000}>
-          <Box
-            sx={{
-              mt: 8,
-              p: 6,
-              borderRadius: 4,
-              background: 'linear-gradient(145deg, #1e1e2e 0%, #2a2a3e 100%)',
-              border: '1px solid rgba(100, 255, 218, 0.2)',
-              textAlign: 'center',
-            }}
-          >
-            <Typography
-              variant="h4"
-              sx={{
-                color: 'primary.main',
-                fontWeight: 600,
-                mb: 3,
-                fontSize: { xs: '1.5rem', md: '2rem' },
-              }}
-            >
-              Academic Excellence
-            </Typography>
-            <Grid container spacing={4} sx={{ mt: 2 }}>
-              <Grid item xs={12} md={4}>
-                <Box sx={{ textAlign: 'center' }}>
-                  <Typography
-                    variant="h3"
-                    sx={{
-                      color: 'primary.main',
-                      fontWeight: 700,
-                      mb: 1,
-                    }}
-                  >
-                    3.66
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ color: 'text.secondary' }}
-                  >
-                    Graduate GPA
-                  </Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Box sx={{ textAlign: 'center' }}>
-                  <Typography
-                    variant="h3"
-                    sx={{
-                      color: 'secondary.main',
-                      fontWeight: 700,
-                      mb: 1,
-                    }}
-                  >
-                    Top 10%
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ color: 'text.secondary' }}
-                  >
-                    Undergraduate Rank
-                  </Typography>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Box sx={{ textAlign: 'center' }}>
-                  <Typography
-                    variant="h3"
-                    sx={{
-                      color: 'primary.main',
-                      fontWeight: 700,
-                      mb: 1,
-                    }}
-                  >
-                    2024
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ color: 'text.secondary' }}
-                  >
-                    Expected Graduation
-                  </Typography>
-                </Box>
-              </Grid>
-            </Grid>
-          </Box>
-        </Fade>
       </Container>
     </Box>
   );
 };
 
-export default AcademicsSection;
+export default React.memo(AcademicsSection);

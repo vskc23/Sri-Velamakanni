@@ -10,8 +10,6 @@ import {
   Button,
   Chip,
   IconButton,
-  useTheme,
-  useMediaQuery,
   Fade,
   Dialog,
   DialogTitle,
@@ -27,7 +25,6 @@ import {
 import { sections } from '../constants/sectionData';
 
 const ProjectsSection = () => {
-  const theme = useTheme();
   const [selectedProject, setSelectedProject] = useState(null);
   
   const projectsData = sections.find(section => section.id === 'projects');
@@ -467,4 +464,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection;
+export default React.memo(ProjectsSection);

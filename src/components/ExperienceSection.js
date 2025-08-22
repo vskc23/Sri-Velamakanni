@@ -7,15 +7,13 @@ import {
   CardContent,
   Chip,
   Avatar,
-  useTheme,
-  useMediaQuery,
   Fade,
 } from '@mui/material';
 import { Work as WorkIcon, LocationOn as LocationIcon } from '@mui/icons-material';
 import { sections } from '../constants/sectionData';
+import InstitutionIcon from './InstitutionIcon';
 
 const ExperienceSection = () => {
-  const theme = useTheme();
   
   const experienceData = sections.find(section => section.id === 'experience');
 
@@ -153,16 +151,13 @@ const ExperienceSection = () => {
                     <CardContent sx={{ p: 4 }}>
                       {/* Header */}
                       <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 3, mb: 3 }}>
-                        <Avatar
-                          src={experience.imageUrl}
-                          sx={{
-                            width: 60,
-                            height: 60,
-                            border: '2px solid rgba(100, 255, 218, 0.3)',
-                          }}
-                        >
-                          <WorkIcon />
-                        </Avatar>
+                        <InstitutionIcon
+                          imageUrl={experience.imageUrl}
+                          websiteUrl={experience.websiteUrl}
+                          title={experience.title}
+                          size={60}
+                          borderColor="rgba(100, 255, 218, 0.3)"
+                        />
                         <Box sx={{ flex: 1 }}>
                           <Typography
                             variant="h5"
@@ -320,4 +315,4 @@ const ExperienceSection = () => {
   );
 };
 
-export default ExperienceSection;
+export default React.memo(ExperienceSection);

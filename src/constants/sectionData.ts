@@ -8,7 +8,7 @@ export const sections: {
   {
     id: "about",
     content:
-      "My tech journey began with over two years of software engineering at DBS Tech India, focusing on full-stack development with ReactJS and Spring Boot. I participated in the 2020 DBS Hack2Hire Hackathon, which led to a role as a Software Developer at DBS Bank. Currently, I'm delving into Natural Language Processing (NLP) and its potential. I'm seeking full-time Software Engineering roles starting December 2024. I'm excited to tackle new challenges, collaborate with professionals, and contribute to impactful projects. Let's connect!",
+      "I am a Software Engineer with a Master's in Computer Science from Penn State University, specializing in large-scale distributed systems and enterprise fintech solutions across payments, settlements, and transaction processing. My professional journey includes building scalable Java/Spring Boot microservices, distributed caching with Hazelcast (improving response times by 40%), CI/CD pipelines with Jenkins, React/Redux dashboards for transaction insights, and automated financial reporting pipelines at DBS Bank. Most recently at Walmart Global Tech, I contributed to the next-gen unified settlements platform by onboarding major processors (InComm, Fiserv, Solutran, Amex) and developing Kafka + Spring Batch–driven reconciliation jobs that reconcile 10M+ daily transactions, while also designing and deploying chargeback pipelines for Amex and Discover using Java 17 and Kafka, reducing manual dispute handling by 40% and enabling real-time financial impact classification.",
     title: "About",
   },
   {
@@ -16,14 +16,26 @@ export const sections: {
     title: "Experience",
     content: [
       {
-        startDate: "2023-08",
+        startDate: "2025-03",
         endDate: "Present",
+        title: "Walmart Global Tech",
+        subtitle: "Software Engineer",
+        description: "Onboarded multiple processors (InComm, Fiserv, Solutran, Discover & Amex) into Walmart's next-gen unified settlements system by building reconciliation jobs with Kafka streaming + SpringBatch, achieving 100% production ramp-up and ensuring accurate daily transaction reconciliation across 10M+ records with zero revenue leakage. Designed and deployed chargeback processing pipelines for Amex & Discover using Java 17, Kafka, and cron-based workflows, automating dispute validation and reporting; enabled Walmart to reduce manual dispute handling by 40% and achieve 20% ramp-up in production with real-time financial impact classification. Built automation test suites with Karate to validate reconciliation and chargeback workflows end-to-end, improving test coverage to >85% and cutting release validation time by 30%, thereby increasing system reliability and accelerating production rollouts.",
+        skills: ["Java 17", "Kafka", "Spring Batch", "Karate", "Microservices"],
+        location: "Bentonville, AR",
+        imageUrl: `${process.env.PUBLIC_URL}/icons/walmart.ico`,
+        websiteUrl: "https://careers.walmart.com/",
+      },
+      {
+        startDate: "2023-08",
+        endDate: "2024-12",
         title: "Pennsylvania State University",
         subtitle: "Graduate Teaching Assistant",
         description: "As a Teaching Assistant for CMPSC 461 (Programming Language Concepts), my responsibilities include, but are not limited to conducting office hours and helping students with their doubts, designing and grading assignments mini projects, and proctoring exams.",
         skills: ["Python", "Scheme", "Functional Programming"],
         location: "State College, SC",
         imageUrl: `${process.env.PUBLIC_URL}/icons/pennState.ico`,
+        websiteUrl: "https://www.psu.edu/",
       },
       {
         startDate: "2022-03",
@@ -34,6 +46,7 @@ export const sections: {
         skills: ["Hazelcast", "Liquibase", "Agile Methodologies", "REST APIs"],
         location: "Hyderabad, IN",
         imageUrl: `${process.env.PUBLIC_URL}/icons/DBS.ico`,
+        websiteUrl: "https://www.dbs.com/default.page",
       },
       {
         startDate: "2020-06",
@@ -44,6 +57,7 @@ export const sections: {
         skills: ["Version Control", "Redux", "React.js", "Spring Boot", "Saga Pattern"],
         location: "Hyderabad, IN",
         imageUrl: `${process.env.PUBLIC_URL}/icons/DBS.ico`,
+        websiteUrl: "https://www.dbs.com/default.page",
       },
       {
         startDate: "2022-09",
@@ -54,6 +68,7 @@ export const sections: {
         skills: ["Python", "Django", "PostgreSQL"],
         location: "Hyderabad, IN",
         imageUrl: `${process.env.PUBLIC_URL}/icons/IDRBT.jpg`,
+        websiteUrl: "https://www.idrbt.ac.in/",
       },
     ],
   },
@@ -70,6 +85,7 @@ export const sections: {
           skills: ["Machine Learning", "Natural Language Processing", "Data Driven Design"],
           location: "State College, SC",
           imageUrl: `${process.env.PUBLIC_URL}/icons/pennState.ico`,
+          websiteUrl: "https://www.psu.edu/",
           isAcademics: true,
         },
         {
@@ -81,6 +97,7 @@ export const sections: {
           skills: ["Data Structures & Algorithms", "Operating Systems", "Computer Architecheture","Software Engineering"],
           location: "Hyderabad, IN",
           imageUrl: `${process.env.PUBLIC_URL}/icons/download.jpg`,
+          websiteUrl: "https://www.gitam.edu/",
           isAcademics: true,
         },
       ],

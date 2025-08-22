@@ -7,8 +7,6 @@ import {
   Grid,
   Fade,
   Slide,
-  useTheme,
-  useMediaQuery,
 } from '@mui/material';
 import { 
   KeyboardArrowDown as ArrowDownIcon,
@@ -20,7 +18,6 @@ import {
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const theme = useTheme();
   
   const roles = [
     'Software Engineer',
@@ -32,29 +29,40 @@ const HeroSection = () => {
   useEffect(() => {
     const currentRole = roles[currentIndex];
     let charIndex = 0;
+    let typeTimer;
+    let deleteTimer;
+    let pauseTimer;
     
-    const typeInterval = setInterval(() => {
+    const typeText = () => {
       if (charIndex <= currentRole.length) {
         setDisplayText(currentRole.slice(0, charIndex));
         charIndex++;
+        typeTimer = setTimeout(typeText, 100);
       } else {
-        clearInterval(typeInterval);
-        setTimeout(() => {
-          const deleteInterval = setInterval(() => {
-            if (charIndex > 0) {
-              setDisplayText(currentRole.slice(0, charIndex));
-              charIndex--;
-            } else {
-              clearInterval(deleteInterval);
-              setCurrentIndex((prev) => (prev + 1) % roles.length);
-            }
-          }, 50);
-        }, 2000);
+        // Pause before deleting
+        pauseTimer = setTimeout(deleteText, 2000);
       }
-    }, 100);
+    };
+    
+    const deleteText = () => {
+      if (charIndex > 0) {
+        charIndex--;
+        setDisplayText(currentRole.slice(0, charIndex));
+        deleteTimer = setTimeout(deleteText, 50);
+      } else {
+        // Move to next role
+        setCurrentIndex((prev) => (prev + 1) % roles.length);
+      }
+    };
+    
+    typeText();
 
-    return () => clearInterval(typeInterval);
-  }, [currentIndex, roles]);
+    return () => {
+      clearTimeout(typeTimer);
+      clearTimeout(deleteTimer);
+      clearTimeout(pauseTimer);
+    };
+  }, [currentIndex]);
 
   const handleScrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
@@ -352,4 +360,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default React.memo(HeroSection);
